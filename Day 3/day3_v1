@@ -1,0 +1,50 @@
+# Day 3 - Pizza order calculator
+# Practises: if / elif, logical operators (and, or), and building up a running total.
+
+print("Welcome to Python Pizza Deliveries!")
+
+# Start the running total at 0. We keep adding to this variable as the
+# customer makes choices, then print it at the very end.
+bill = 0
+
+# input() returns a string. Here we keep it as text because we compare it
+# to letters like "S", not numbers.
+size = input("What size pizza do you want? S, M, or L = ")
+
+# if / elif checks each condition in order and runs the FIRST matching block.
+# Note: if the user types something other than S, M, or L, none of these run
+# and the price stays 0 (a gap in this simple version).
+if size == "S":
+    bill += 15                      # bill += 15 means: bill = bill + 15
+    print("Small size Pizza is for $15")
+elif size == "M":
+    bill += 20
+    print("Medium size Pizza is for $20")
+elif size == "L":
+    bill += 25
+    print("Large size Pizza is for $25")
+
+pepperoni = input("Do you want pepperoni? Y or N = ")
+
+# "and" is True only when BOTH sides are True.
+# So this runs only if they asked for pepperoni AND picked the small pizza.
+if pepperoni == "Y" and size == "S":
+    bill += 2
+    print("You have to pay an extra $2 for pepperoni on small size pizza")
+# "or" is True when EITHER side is True. The brackets group the "or" check
+# so it is evaluated first, then combined with the "and".
+# Reads as: pepperoni is "Y" AND (size is "M" OR size is "L").
+elif pepperoni == "Y" and (size == "M" or size == "L"):
+    bill += 3
+    print("You have to pay an extra $3 for pepperoni on medium or large size pizza")
+
+extra_cheese = input("Do you want extra cheese? Y or N = ")
+# This line always prints, even if they say N - a small bug in this version.
+# Ideally it would go inside the if block below.
+print("You have to pay an extra $1 for extra cheese")
+
+if extra_cheese == "Y":
+    bill += 1
+
+# f-string: the value of bill is inserted where {bill} appears.
+print(f"Your final bill is: ${bill}")

@@ -1,0 +1,8 @@
+# Course material (copyrighted - App Brewery)
+Course Matarial/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
