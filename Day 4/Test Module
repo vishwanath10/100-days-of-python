@@ -1,0 +1,3 @@
+import RandomNumber
+
+print(RandomNumber.random_integer)
