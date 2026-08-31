@@ -139,25 +139,21 @@ print("---- Section 8: practice ----")
 # Practice 1: A user can drive if they are 18 or older AND have a license.
 user_age = 19
 has_license = True
-# TODO: replace False with your condition using "and"
-can_drive = False
+can_drive = user_age >= 18 and has_license
 print("Practice 1:", "Correct!" if can_drive == (user_age >= 18 and has_license) else "Try again")
 
 # Practice 2: Entry is free if you are under 5 OR 65 and over.
 visitor_age = 70
-# TODO: replace False with your condition using "or"
-free_entry = False
+free_entry = visitor_age < 5 or visitor_age >= 65
 print("Practice 2:", "Correct!" if free_entry == (visitor_age < 5 or visitor_age >= 65) else "Try again")
 
 # Practice 3: A seat is available if it is NOT booked.
 is_booked = False
-# TODO: replace False with your condition using "not"
-seat_available = False
+seat_available = not is_booked
 print("Practice 3:", "Correct!" if seat_available == (not is_booked) else "Try again")
 
 # Practice 4: A number n passes if it is between 1 and 100 (inclusive)
 #             AND it is even.  (even means n % 2 == 0)
 n = 42
-# TODO: replace False with your condition
-passes = False
+passes = 1 <= n <= 100 and n % 2 == 0
 print("Practice 4:", "Correct!" if passes == (1 <= n <= 100 and n % 2 == 0) else "Try again")
