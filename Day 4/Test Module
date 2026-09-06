@@ -1,8 +1,0 @@
-# Day 4 - Importing your own file as a module
-# "import RandomNumber" runs RandomNumber.py once and gives us access to
-# the names defined in it via the "RandomNumber." prefix.
-import RandomNumber
-
-# random_integer is a variable created inside RandomNumber.py; we read it
-# back out here through the module.
-print(RandomNumber.random_integer)
