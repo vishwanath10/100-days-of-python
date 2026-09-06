@@ -2,12 +2,12 @@
 DAY 4 - THE random MODULE REFERENCE
 ==================================
 "random" is part of Python's standard library, so there is nothing to
-install. Import it once at the top of the file, then call functions with
+install. Import it once at the top of the file. Then call functions with
 "random.xxx()".
 
-The numbers it produces are "pseudo-random": they come from a math formula,
-not true physical randomness, but for games, simulations and learning
-exercises they behave randomly enough.
+The numbers it produces are "pseudo-random". They come from a math formula,
+not from true physical randomness. For games, simulations, and learning
+exercises, they are random enough.
 
 Run me:  python "Day 4/random_reference.py"
 """
@@ -31,7 +31,7 @@ print("You rolled a", dice_roll)
 # ---------------------------------------------------------------------------
 print(random.random())
 
-# Multiply to stretch the range, add to shift it.
+# Multiply the result to widen the range. Add a number to move it.
 print(random.random() * 5)        # 0.0 up to (not including) 5.0
 print(random.random() * 5 + 2)    # 2.0 up to (not including) 7.0
 
@@ -57,7 +57,7 @@ foods = ["pizza", "sushi", "tacos", "pasta", "curry"]
 print("Tonight we eat:", random.choice(foods))
 print("Random letter:", random.choice("abcdefg"))   # a string is a sequence too
 
-# Doing it manually with an index:
+# Do the same thing manually with an index:
 random_index = random.randint(0, len(foods) - 1)    # 0 .. last valid index
 print("Manual pick:", foods[random_index])
 
@@ -67,7 +67,7 @@ print("Manual pick:", foods[random_index])
 # ---------------------------------------------------------------------------
 print("Three picks (repeats allowed):", random.choices(foods, k=3))
 
-# weights bias the outcome. Here "heads" is 3x as likely.
+# weights change the odds. Here "heads" is 3 times as likely as "tails".
 print("Weighted flip:", random.choices(["heads", "tails"], weights=[3, 1], k=1)[0])
 
 
@@ -88,14 +88,14 @@ print("Shuffled deck:", cards)
 
 
 # ---------------------------------------------------------------------------
-# 9. random.seed(number)  ->  make randomness repeatable
+# 9. random.seed(number)  ->  make random numbers repeatable
 # ---------------------------------------------------------------------------
-# The same seed always produces the same sequence - handy for reproducing
+# The same seed always produces the same sequence. This helps you reproduce
 # a bug or a test result.
 random.seed(42)
 print(random.randint(1, 100))   # always 82 with seed 42
 print(random.randint(1, 100))   # always 15 with seed 42
-random.seed()                   # no argument -> re-randomise from the clock
+random.seed()                   # no argument -> seed again from the system clock
 
 
 # ---------------------------------------------------------------------------
@@ -111,8 +111,8 @@ else:
 # ---------------------------------------------------------------------------
 # 11. MINI PRACTICE: flip a coin 10,000 times and check the split
 # ---------------------------------------------------------------------------
-# A fair coin should land heads roughly 50% of the time. Running many trials
-# and counting is a simple way to sanity-check that randint is unbiased.
+# A fair coin should land heads roughly 50% of the time. If you run many
+# trials and count the results, you can test that randint has no bias.
 heads_count = 0
 flips = 10_000
 for _ in range(flips):

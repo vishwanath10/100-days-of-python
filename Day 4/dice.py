@@ -1,14 +1,14 @@
 """
-Day 4 - A tiny module, imported by importing_modules.py
-======================================================
-A "module" is just another .py file. Anything defined here (functions,
-variables) becomes available to a file that imports it.
+Day 4 - A tiny module, used by importing_modules.py
+==================================================
+A "module" is just another .py file. Another file can import this file. It
+then gets the names defined here (functions and variables).
 """
 
 import random
 
-# A module-level variable. It is created ONCE, the moment this file is
-# first imported.
+# A module-level variable. Python creates it ONCE, when another file first
+# imports this file.
 name = "dice roller"
 
 
@@ -17,8 +17,8 @@ def roll(sides=6):
     return random.randint(1, sides)
 
 
-# This block runs only when the file is executed directly
-# (python "Day 4/dice.py"), NOT when it is imported. It is the standard
-# way to keep a module's "demo" code from firing on import.
+# Python runs this block only when you run this file directly
+# (python "Day 4/dice.py"). Python does not run it on import. This is the
+# standard way to make demo code run only on a direct run.
 if __name__ == "__main__":
     print(f"{name}: {roll()}")

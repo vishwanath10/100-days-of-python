@@ -1,8 +1,9 @@
 """
 Day 3 Project - Roller Coaster Ticketing
 ========================================
-Decide whether the visitor can ride, then build up their ticket price.
-Practises: if / else, nested if / elif / else, == comparison, bill += n.
+Decide whether the visitor can ride, then calculate the ticket price step
+by step.
+Practices: if / else, nested if / elif / else, == comparison, bill += n.
 
 Run me:  python "Day 3/project_rollercoaster.py"
 """
@@ -17,16 +18,17 @@ height = int(input("What is your height in cm? "))
 if height < 120:
     print("Sorry, you cannot ride the roller coaster.")
 else:
-    # Reached when height is NOT less than 120 (i.e. 120 or taller).
+    # Python runs this block when height is NOT less than 120 (that is, 120
+    # or taller).
     print("You can ride the roller coaster!")
     age = int(input("What is your age? "))
 
     # if / elif / else checks conditions in order, top to bottom. As soon as
-    # one is True its block runs and the rest are skipped.
+    # one is True, its block runs and Python skips the rest.
     if age < 12:
         bill = 5          # child
     elif age <= 18:
-        bill = 7          # 12 to 18 (only reached because age was NOT < 12)
+        bill = 7          # 12 to 18 (Python gets here only if age was not < 12)
     else:
         bill = 12         # adult
 

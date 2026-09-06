@@ -1,6 +1,6 @@
 """
-Day 5 - Concepts: for loops, range(), and aggregating with a loop
-================================================================
+Day 5 - Concepts: for loops, range(), and adding values with a loop
+==================================================================
 Run me:  python "Day 5/concepts.py"
 Read each comment next to the line it explains.
 """
@@ -8,8 +8,8 @@ Read each comment next to the line it explains.
 # ---------------------------------------------------------------------------
 # 1. Looping over a list
 # ---------------------------------------------------------------------------
-# "for <item> in <list>:" runs the indented block once per item, with <item>
-# holding the current value each time round.
+# "for <item> in <list>:" runs the indented block once per item. Each time,
+# <item> holds the current value.
 fruits = ["Apple", "Peach", "Pear"]
 for fruit in fruits:
     print(fruit)
@@ -17,9 +17,9 @@ for fruit in fruits:
 
 
 # ---------------------------------------------------------------------------
-# 2. Finding a maximum by hand
+# 2. Find the largest value by hand
 # ---------------------------------------------------------------------------
-# Keep a "best so far" variable, and update it whenever you see something bigger.
+# Keep a "largest so far" variable. Update it whenever you find a larger value.
 scores = [150, 120, 185, 119, 91, 76]
 highest = 0
 for score in scores:
@@ -36,7 +36,7 @@ print("max():", max(scores))
 
 
 # ---------------------------------------------------------------------------
-# 4. Adding up a list by hand (the pattern behind sum())
+# 4. Total a list by hand (the pattern behind sum())
 # ---------------------------------------------------------------------------
 total = 0
 for score in scores:
@@ -45,7 +45,7 @@ print(f"Total (manual): {total}")
 
 
 # ---------------------------------------------------------------------------
-# 5. range() - generate a sequence of numbers to loop over
+# 5. range() - make a sequence of numbers for a loop
 # ---------------------------------------------------------------------------
 # range(start, stop) counts from start up to BUT NOT INCLUDING stop.
 # So range(1, 101) is 1, 2, 3, ... 100.

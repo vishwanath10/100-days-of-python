@@ -2,14 +2,14 @@
 Day 2 Project - Tip Calculator
 ==============================
 Split a restaurant bill (including tip) evenly between people.
-Practises: input() + type casting, arithmetic, f-strings.
+Practices: input() + type casting, arithmetic, f-strings.
 
 Run me:  python "Day 2/project_tip_calculator.py"
 """
 
 print("Welcome to the tip calculator!")
 
-# input() returns strings, so these must be converted before doing math.
+# input() returns strings. Convert them before you do math.
 total_bill = input("What was the total bill? = $")
 tip = input("What percentage tip would you like to give? (e.g. 10, 12, 15) = ")
 people = input("How many people to split the bill? = ")

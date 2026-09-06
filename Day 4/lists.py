@@ -13,7 +13,7 @@ Read each comment next to the line it explains.
 fruits = ["Apple", "Peach", "Pear", "Grape"]
 print(fruits[0])        # "Apple"  -> first item
 print(fruits[2])        # "Pear"   -> third item
-print(fruits[-1])       # "Grape"  -> last item (negative indexes count back)
+print(fruits[-1])       # "Grape"  -> last item (negative indexes count from the end)
 print(len(fruits))      # 4        -> number of items
 
 
@@ -25,7 +25,7 @@ print(fruits)           # ["Apple", "Banana", "Pear", "Grape"]
 
 
 # ---------------------------------------------------------------------------
-# 3. Adding items: append() vs extend()
+# 3. Adding items: append() and extend()
 # ---------------------------------------------------------------------------
 fruits.append("Mango")             # append() adds ONE item to the end
 print(fruits)
@@ -33,7 +33,7 @@ print(fruits)
 fruits.extend(["Kiwi", "Melon"])   # extend() adds SEVERAL items, one by one
 print(fruits)
 
-# Careful: append(a_list) nests the whole list as a single item.
+# Warning: append(a_list) nests the whole list as one item.
 fruits.append(["x", "y"])
 print(fruits[-1])                   # ["x", "y"]  -> a list inside the list
 fruits.pop()                        # remove that last item again
@@ -48,7 +48,7 @@ row_veg = ["Spinach", "Kale", "Tomato"]
 grocery = [row_fruits, row_veg]     # a list whose items are themselves lists
 print(grocery)
 
-# Index twice: first pick the inner list, then pick an item from it.
+# Index twice. First pick the inner list. Then pick an item from that list.
 print(grocery[0])       # ["Strawberry", "Apple", "Banana"]
 print(grocery[1][0])    # "Spinach"  -> inner list 1, item 0
 print(grocery[0][2])    # "Banana"   -> inner list 0, item 2

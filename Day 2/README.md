@@ -4,15 +4,16 @@
 
 ## What I learned
 
-- **Data types**: `str`, `int`, `float`, `bool`. `type(value)` reports which one.
-- **Type casting**: `int()`, `float()`, `str()` convert between types.
-- **String indexing**: `"Hello"[0]` is `"H"`, `"Hello"[-1]` is `"o"`.
+- **Data types**: `str`, `int`, `float`, `bool`. `type(value)` tells you which one.
+- **Type casting**: `int()`, `float()`, `str()` convert a value from one type to
+  another.
+- **String indexing**: `"Hello"[0]` is `"H"`. `"Hello"[-1]` is `"o"`.
 - **Arithmetic**: `+  -  *  /  //  **` and operator precedence (PEMDAS).
-  - `/` always gives a `float`; `//` floors to a whole number.
+  - `/` always gives a `float`. `//` rounds to the lower whole number.
 - **`round(x)`** and **`round(x, ndigits)`**.
 - **Assignment operators**: `score += 1` means `score = score + 1`.
-- **f-strings**: `f"Your score is {score}"` inserts variables into text.
-- Underscores in number literals (`123_456`) are cosmetic only.
+- **f-strings**: `f"Your score is {score}"` puts variables into text.
+- Underscores in number literals (`123_456`) only help reading. Python ignores them.
 
 ## Key syntax
 
@@ -27,8 +28,8 @@ print(f"Total: {total}")        # f-string
 
 ## Gotchas
 
-- `input()` is always a string — cast it before arithmetic.
-- `"text" + number` raises `TypeError`; use `"text" + str(number)` or an f-string.
+- `input()` is always a string. Cast it before you do arithmetic.
+- `"text" + number` raises `TypeError`. Use `"text" + str(number)` or an f-string.
 - `/` returns a float even for exact divisions (`4 / 2` -> `2.0`).
 
 ## Files

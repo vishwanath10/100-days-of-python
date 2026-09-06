@@ -2,7 +2,7 @@
 Day 4 Project - Rock, Paper, Scissors
 =====================================
 Play one round against a random computer move.
-Practises: the random module, lists as a lookup table, multi-line strings,
+Practices: the random module, lists as a lookup table, multi-line strings,
 if / elif / else.
 
 Run me:  python "Day 4/project_rock_paper_scissors.py"
@@ -10,9 +10,9 @@ Run me:  python "Day 4/project_rock_paper_scissors.py"
 
 import random
 
-# Triple-quoted strings can span several lines, so the newlines below are
-# stored inside each string. The leading blank line keeps the art off the
-# text printed just above it.
+# Triple-quoted strings can span several lines, so Python stores the
+# newlines below inside each string. The blank first line separates the art
+# from the text above it.
 rock = r"""
     _______
 ---'   ____)
@@ -53,10 +53,12 @@ else:
     computer_choice = random.randint(0, 2)
     print("Computer chose:" + game_images[computer_choice])
 
-    # Every pairing of user (0-2) and computer (0-2):
-    #   equal values             -> draw
-    #   0 vs 2 / 1 vs 0 / 2 vs 1  -> user wins
-    #   everything else           -> user loses
+    # Compare the user value (0-2) with the computer value (0-2):
+    #   - the two values are equal                  -> draw
+    #   - user 0 and computer 2                     -> user wins
+    #   - user 1 and computer 0                     -> user wins
+    #   - user 2 and computer 1                     -> user wins
+    #   - every other pair                          -> user loses
     if user_choice == computer_choice:
         print("It's a draw.")
     elif user_choice == 0 and computer_choice == 2:
