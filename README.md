@@ -25,6 +25,7 @@ and how to run it. Inline comments explain each step.
 | 3 | Conditionals & Logical Operators | `if`/`elif`/`else`, nested `if`, comparisons, `and`/`or`/`not`, `in`, `is`, truthy/falsy, ternary, `%` | [`Day 3/`](Day%203/) |
 | 4 | Lists, Random Numbers & Modules | lists + methods, nested/2D lists, the `random` module, `import`, `__name__ == "__main__"` | [`Day 4/`](Day%204/) |
 | 5 | Loops | `for ... in`, `range()`, totals in a loop (`sum`/`max` by hand), FizzBuzz | [`Day 5/`](Day%205/) |
+| 6 | Functions, While Loops & Conditionals | `def`, function calls, `while`, `not`, `if`/`elif`/`else`, nested `if` | [`Day 6/`](Day%206/) |
 
 ## Running the code
 
@@ -32,6 +33,7 @@ and how to run it. Inline comments explain each step.
 # from the repo root
 python "Day 3/operators_reference.py"
 python "Day 5/project_fizzbuzz.py"
+python "Day 6/concepts.py"
 ```
 
 Some concept files call `input()`. They stop and wait for you to type. This is
